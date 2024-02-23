@@ -28,8 +28,6 @@ public class Studentservice {
     public Student updateStudent(Long id, Student studentDetails) {
         Student student = studentRepository.findById(id).orElse(null);
         if (student != null) {
-            // Update student details
-            // ...
             return studentRepository.save(student);
         }
         return null;
